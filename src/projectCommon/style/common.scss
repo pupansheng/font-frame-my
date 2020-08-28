@@ -1,0 +1,89 @@
+@mixin title{
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border-left: 4px solid #2290ff;
+  background-color: #F7FAFC;
+  padding-left: 24px;
+  font-family: 'PingFangSC-Medium';
+  font-size: 16px;
+  color: #666;
+  margin: 0 24px 20px 24px;
+  // margin: 0 0 20px 24px;
+  font-weight: bold;
+}
+@mixin header{
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  height: 56px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+@mixin table{
+  width: 100%;
+  tr{
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+    th{
+      height: 54px;
+      padding-left: 16px;
+      background-color: #FAFAFA;
+      font-family: 'PingFangSC-Medium';
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.85);
+      white-space: nowrap;
+      font-weight: normal;
+    }
+    th:first-child{
+      border-radius: 4px 0 0 0;
+    }
+    th:last-child{
+      border-radius: 0 4px 0 0;
+    }
+    td{
+      height: 54px;
+      padding-left: 16px;
+      font-family: 'PingFangSC-Regular';
+      font-size: 14px;
+      color: #666;
+      >div{
+        // width: 90%; // 打开后影响noData样式
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .operate{
+        display: flex;
+        >div{
+          display: flex;
+          align-items: center;
+          color: #1890FF;
+          cursor: pointer;
+          .border{
+            display: inline-block;
+            margin: 0 13px 0 8px;
+            width: 1px;
+            height: 14px;
+            background-color: #e8e8e8;
+          }
+        }
+        >div:last-child .border{
+          display: none;
+        }
+      }
+      .noData{
+        display: flex;
+        justify-content: center;
+        color: rgba(0,0,0,.45);
+      }
+    }
+  }
+}
+@mixin pagination{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
